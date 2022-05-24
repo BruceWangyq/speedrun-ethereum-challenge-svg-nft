@@ -242,7 +242,7 @@ function App(props) {
   useEffect(() => {
     const updateYourCollectibles = async () => {
       const collectibleUpdate = [];
-      for (let tokenIndex = 1; tokenIndex <= balance; tokenIndex++) {
+      for (let tokenIndex = 1; tokenIndex <= totalAmountSupplyNFT; tokenIndex++) {
         try {
           console.log("GEtting token index", tokenIndex);
           let tokenId;
@@ -273,7 +273,7 @@ function App(props) {
       setYourCollectibles(collectibleUpdate);
     };
     updateYourCollectibles();
-  }, [address, yourBalance]);
+  }, [address, yourBalance, totalSupply]);
 
   let networkDisplay = "";
   if (NETWORKCHECK && localChainId && selectedChainId && localChainId !== selectedChainId) {
