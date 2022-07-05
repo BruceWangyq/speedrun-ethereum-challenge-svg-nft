@@ -175,7 +175,7 @@ contract YourCollectible is ERC721, Ownable {
     // all funds go to buidlguidl.eth
     address payable public constant recipient = payable(0xa81a6a910FeD20374361B35C451a4a44F86CeD46);
 
-    constructor() ERC721("SporeSpeedrunLoogieSVG", "SSLS") {}
+    constructor() ERC721("BruceLoogieSVG", "BLS") {}
 
     function mintItem()  public payable returns (uint256) {
         require(_tokenIds.current() < totalAmount, "DONE MINTING");
@@ -236,8 +236,8 @@ contract YourCollectible is ERC721, Ownable {
 
      function tokenURI(uint256 id) public view override returns (string memory) {
       require(_exists(id), "not exist");
-      string memory name = string(abi.encodePacked('SporeSpeedrunLoogieSVG #',id.toString()));
-      string memory description = string(abi.encodePacked('This SporeSpeedrunLoogieSVG is the color #',color[id].toColor(),' with a chubbiness of ',uint2str(chubbiness[id]),' and mouth length of ',uint2str(mouthLength[id]),'!!!'));
+      string memory name = string(abi.encodePacked('BruceLoogieSVG #',id.toString()));
+      string memory description = string(abi.encodePacked('This BruceLoogieSVG is the color #',color[id].toColor(),' with a chubbiness of ',uint2str(chubbiness[id]),' and mouth length of ',uint2str(mouthLength[id]),'!!!'));
       string memory image = Base64.encode(bytes(generateSVGofTokenById(id)));
 
       return

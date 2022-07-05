@@ -5,7 +5,7 @@
       "chainId": "4",
       "contracts": {
         "YourCollectible": {
-          "address": "0x45d43875c5D582BE708D78f662f33ee4b2905F6D",
+          "address": "0xC72A0f3c8112B98E8f52142228ba379733c907F2",
           "abi": [
             {
               "inputs": [],
